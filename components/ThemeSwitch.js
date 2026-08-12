@@ -38,7 +38,11 @@ const ThemeSwitch = () => {
         type="button"
         onClick={() => {
           toggleTheme()
-          ThemeSound()
+          try {
+            ThemeSound()
+          } catch (e) {
+            // Ignore sound play error
+          }
         }}
       >
         {theme === 'dark' || resolvedTheme === 'dark' ? (

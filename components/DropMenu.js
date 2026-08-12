@@ -71,11 +71,19 @@ export default function DropMenu() {
         leaveTo="transform opacity-0 scale-95"
         afterEnter={() => {
           toggleIcon()
-          ThemeSound()
+          try {
+            ThemeSound()
+          } catch (e) {
+            // Ignore sound play error
+          }
         }}
         afterLeave={() => {
           toggleIcon()
-          ThemeSound()
+          try {
+            ThemeSound()
+          } catch (e) {
+            // Ignore sound play error
+          }
         }}
       >
         <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-zinc-300 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:divide-zinc-700 dark:bg-zinc-800 ">
