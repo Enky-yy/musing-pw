@@ -31,7 +31,7 @@ const projectsData = [
     tech2: 'Redis',
     tech3: 'SQLAlchemy',
   },
-  
+
   {
     title: 'Text Classifier',
     description: `It is a text classification model which classifies the text based on the emotions .`,

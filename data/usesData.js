@@ -34,7 +34,7 @@ const usesData = [
     description: `Permanent docs, organizing my life.`,
     href: 'https://www.notion.so/',
   },
-   {
+  {
     title: 'PyCharm',
     description: `PyCharm for python development, its plugins and setup are amazing`,
     href: 'https://www.jetbrains.com/pycharm/',
@@ -44,7 +44,7 @@ const usesData = [
     description: `Currently running Arch Linux on my machine.`,
     href: 'https://archlinux.org/',
   },
-   {
+  {
     title: 'Opencode',
     description: `Currently using opencode for my AI coding needs.`,
     href: 'https://opencode.com/',
