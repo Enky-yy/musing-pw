@@ -8,7 +8,7 @@
     "url": "https://harsh-shah.me"
   },
   "scripts": {
-    "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
+    "start": "next start",
     "dev": "next dev",
     "build": "prisma generate && next build && node ./scripts/generate-sitemap",
     "serve": "next start",
