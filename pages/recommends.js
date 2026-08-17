@@ -14,8 +14,8 @@ export async function getStaticProps() {
 }
 
 export default function Recommends(reviews) {
-  let reviewsData = reviews['reviews']
-  let reviewsData1 = reviews['currentlyReading']
+  let reviewsData = Array.isArray(reviews?.['reviews']) ? reviews['reviews'] : []
+  let reviewsData1 = Array.isArray(reviews?.['currentlyReading']) ? reviews['currentlyReading'] : []
 
   return (
     <>

@@ -8,8 +8,10 @@ export default async function handler(req, res) {
       },
     })
 
-    return res.status(200).json({ total: totalViews._sum.count.toString() })
+    const count = totalViews?._sum?.count ?? 0
+    return res.status(200).json({ total: count.toString() })
   } catch (e) {
-    return res.status(500).json({ message: e.message })
+    console.error('Views API error:', e.message)
+    return res.status(200).json({ total: '0' })
   }
 }

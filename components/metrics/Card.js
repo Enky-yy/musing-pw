@@ -1,4 +1,11 @@
 export default function MetricCard({ header, link, metric, isCurrency }) {
+  const numericVal =
+    typeof metric === 'number'
+      ? metric
+      : metric !== null && metric !== undefined && !isNaN(Number(metric))
+      ? Number(metric)
+      : null
+
   return (
     <div className="metric-card w-full max-w-72 rounded-lg bg-gray-200 p-4 backdrop-filter transition duration-200 hover:bg-gray-600 hover:bg-opacity-40 dark:bg-gray-900 dark:hover:bg-gray-500 dark:hover:bg-opacity-40">
       <a aria-label={header} target="_blank" rel="noopener noreferrer" href={link}>
@@ -21,8 +28,8 @@ export default function MetricCard({ header, link, metric, isCurrency }) {
         </div>
       </a>
       <p className="spacing-sm mt-2 text-3xl font-bold text-black dark:text-white">
-        {metric > 0 && isCurrency && '$'}
-        {typeof metric === 'number' && !isNaN(metric) ? metric.toLocaleString() : '-'}
+        {numericVal !== null && numericVal > 0 && isCurrency && '$'}
+        {numericVal !== null && !isNaN(numericVal) ? numericVal.toLocaleString() : '-'}
       </p>
     </div>
   )

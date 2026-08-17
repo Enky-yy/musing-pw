@@ -40,8 +40,8 @@ export default function Footer() {
         </div>
         <div className="mb-2 text-sm text-gray-500 dark:text-gray-400 sm:block md:hidden lg:hidden">
           <div className="mx-1">
-            <Link href="https://harsh-shah.me/" className="link-underline">
-              Parth{` © ${year}`}
+            <Link href="https://harsh-shah.me" className="link-underline">
+              Harsh{` © ${year}`}
             </Link>
           </div>
         </div>

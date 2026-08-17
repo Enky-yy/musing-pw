@@ -5,8 +5,8 @@ import MetricCard from 'components/metrics/Card'
 export default function GithubCard() {
   const { data } = useSWR('/api/github-stats', fetcher)
 
-  const stars = new Number(data?.stars)
-  const followers = new Number(data?.followers)
+  const stars = data?.stars !== undefined ? Number(data.stars) : null
+  const followers = data?.followers !== undefined ? Number(data.followers) : null
   const link = 'https://github.com/Enky-yy'
 
   return (

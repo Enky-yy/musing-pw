@@ -13,7 +13,7 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'shahharsh4653@gmail.com',
   github: 'https://github.com/Enky-yy',
-  twitter: 'https://twitter.com',
+  twitter: 'https://twitter.com/HarshShah1510',
   linkedin: 'https://www.linkedin.com/in/harshvardhanshah1510',
   website: 'https://harsh-shah.me',
   locale: 'en-US',
@@ -46,7 +46,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: '',
+    twitter: 'HarshShah1510',
   },
 }
 

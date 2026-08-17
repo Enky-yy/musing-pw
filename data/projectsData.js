@@ -1,5 +1,15 @@
 const projectsData = [
   {
+    title: 'Syntrak',
+    description: `Terminal-based and web-ready open-source code reviewer & writer assistant inspired by Claude Code and OpenCode / Aider, built in Python for local and cloud open-source models.`,
+    imgSrc: '',
+    href: 'https://syntrak.harsh-shah.me',
+    github: 'https://github.com/Enky-yy/Syntrak',
+    tech1: 'Python',
+    tech2: 'FastAPI',
+    tech3: 'OpenAI',
+  },
+  {
     title: 'QR-Based File Sharing App',
     description:
       'A Flask-powered file sharing platform with QR transfer, OCR-based search, and secure uploads.',
@@ -74,7 +84,8 @@ const projectsData = [
   },
   {
     title: 'CampusNest',
-    description: ``,
+    description:
+      'A modern student accommodation and campus living discovery platform built with Next.js and Python.',
     imgSrc: '',
     href: '',
     github: 'https://github.com/Enky-yy/CampusNest',

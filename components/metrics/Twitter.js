@@ -12,9 +12,9 @@ export default function TwitterCard({ type }) {
   let followers = data?.user?.public_metrics?.followers_count ?? 0
   let following = data?.user?.public_metrics?.following_count ?? 0
   let count = data?.user?.public_metrics?.tweet_count ?? 0
-  let username = data?.user?.username || 'Harshhh98'
+  let username = data?.user?.username || 'HarshShah1510'
 
-  const link = 'https://twitter.com/'
+  const link = 'https://twitter.com/HarshShah1510'
 
   return (
     <>

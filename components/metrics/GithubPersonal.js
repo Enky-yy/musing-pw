@@ -5,8 +5,8 @@ import MetricCard from 'components/metrics/Card'
 export default function GithubPersonalCard() {
   const { data } = useSWR('/api/github-stats', fetcher)
 
-  const repos = new Number(data?.repos)
-  const gists = new Number(data?.gists)
+  const repos = data?.repos !== undefined ? Number(data.repos) : null
+  const gists = data?.gists !== undefined ? Number(data.gists) : null
   const link1 = 'https://github.com/Enky-yy?tab=repositories'
   const link2 = 'https://gist.github.com/Enky-yy'
 

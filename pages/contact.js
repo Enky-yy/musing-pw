@@ -15,9 +15,9 @@ const Contact = () => {
             <ContactLink href="mailto:shahharsh4653@gmail.com" title="gmail" icon="shahharsh4653" />
             <ContactLink href="https://github.com/Enky-yy" title="github" icon="Enky-yy" />
             <ContactLink
-              href="https://twitter.com/HarshV69563546"
+              href="https://twitter.com/HarshShah1510"
               title="twitter"
-              icon="HarshV69563546"
+              icon="HarshShah1510"
             />
             <ContactLink
               href="https://www.linkedin.com/in/harshvardhanshah1510/"

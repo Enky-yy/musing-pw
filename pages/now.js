@@ -36,10 +36,11 @@ export const getServerSideProps = async () => {
 
 export default function Now(currentlyReading) {
   const { data } = useSWR('/api/now-playing', fetcher)
-  let currentlyReadingData = currentlyReading['currentlyReading']
-  let weatherData = currentlyReading['data']
-  const { temp: temperature } = weatherData.main
-  const { icon: weatherIcon, description: weatherDescription } = weatherData.weather[0]
+  let currentlyReadingData = currentlyReading?.['currentlyReading'] || []
+  let weatherData = currentlyReading?.['data'] || {}
+  const temperature = weatherData?.main?.temp ?? 0
+  const weatherIcon = weatherData?.weather?.[0]?.icon ?? '01d'
+  const weatherDescription = weatherData?.weather?.[0]?.description ?? ''
 
   const icons = {
     _01d: <BsSunFill className="mb-0.5 inline h-3 w-3 hover:animate-spin" />,
@@ -79,34 +80,35 @@ export default function Now(currentlyReading) {
     return () => clearInterval(timer)
   }, [])
 
-  var ParthBirthDate = '2000-04-16'
-  var birthDate = new Date(ParthBirthDate)
+  const HarshBirthDate = '2006-10-15'
+  const birthDate = new Date(HarshBirthDate)
 
-  var ParthAge = year - birthDate.getFullYear()
+  let HarshAge = year - birthDate.getFullYear()
 
-  var ParthMonth = 0
-  if (month >= birthDate.getMonth()) ParthMonth = month - birthDate.getMonth()
-  else {
-    ParthAge--
-    ParthMonth = 12 + month - birthDate.getMonth()
+  let HarshMonth = 0
+  if (month >= birthDate.getMonth()) {
+    HarshMonth = month - birthDate.getMonth()
+  } else {
+    HarshAge--
+    HarshMonth = 12 + month - birthDate.getMonth()
   }
 
-  var ParthDay = 0
-  if (date >= birthDate.getDate()) ParthDay = date - birthDate.getDate()
-  else {
-    ParthMonth--
-    ParthDay = 31 + date - birthDate.getDate()
-    if (ParthMonth < 0) {
-      ParthMonth = 11
-      ParthAge--
+  let HarshDay = 0
+  if (date >= birthDate.getDate()) {
+    HarshDay = date - birthDate.getDate()
+  } else {
+    HarshMonth--
+    HarshDay = 31 + date - birthDate.getDate()
+    if (HarshMonth < 0) {
+      HarshMonth = 11
+      HarshAge--
     }
   }
 
-  var age = {}
-  age = {
-    years: ParthAge,
-    months: ParthMonth,
-    days: ParthDay,
+  const age = {
+    years: HarshAge,
+    months: HarshMonth,
+    days: HarshDay,
   }
 
   var ageString = ''
@@ -163,15 +165,19 @@ export default function Now(currentlyReading) {
 
             <div className="mb-10 mt-2 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Reading:</span>{' '}
-              <a
-                href={currentlyReadingData[0].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-offset-1 hover:underline"
-              >
-                <span>{currentlyReadingData[0].title}</span> by{' '}
-                <span>{currentlyReadingData[0].author}</span>
-              </a>
+              {currentlyReadingData[0] ? (
+                <a
+                  href={currentlyReadingData[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-1 hover:underline"
+                >
+                  <span>{currentlyReadingData[0].title}</span> by{' '}
+                  <span>{currentlyReadingData[0].author}</span>
+                </a>
+              ) : (
+                <span>No book currently</span>
+              )}
               <br />
               <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
             </div>
@@ -243,9 +249,7 @@ export default function Now(currentlyReading) {
           <p>
             I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
             <Link
-              href={
-                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
-              }
+              href={'https://youtu.be/Aq5WXmQQooo?si=_np98ie8IdiNAATS'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
               Machine Learning tutorial
