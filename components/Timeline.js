@@ -78,32 +78,7 @@ export default function Timeline() {
             Secretary - Outreach Club @ Film and Media Council
           </p>
         </li>
-        <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
-          <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-yellow-300 ring-8 ring-white dark:bg-yellow-700 dark:ring-gray-900">
-            <SiLeetcode />
-          </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">
-            Joined Codeforces
-          </h3>
-          <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            January 12th, 2026
-          </time>
-          <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Preparing for internship
-          </p>
-        </li>
-        <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
-          <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
-            <BsBuilding />
-          </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Member</h3>
-          <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            August 3rd, 2025
-          </time>
-          <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Core Team Member - Outreach Club @ Film and Media Council
-          </p>
-        </li>
+
         {/* <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
           <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-orange-200 ring-8 ring-white dark:bg-orange-900 dark:ring-gray-900">
             <HiOutlineDatabase />
@@ -119,18 +94,6 @@ export default function Timeline() {
           </p>
         </li> */}
 
-        <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
-          <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
-            <BsBuilding />
-          </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Joined College</h3>
-          <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            July 29th, 2024
-          </time>
-          <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-            Bachelor of Technology from IIT (BHU) Varanasi
-          </p>
-        </li>
         <Disclosure>
           {({ open }) => (
             <>
@@ -152,6 +115,48 @@ export default function Timeline() {
               >
                 <Disclosure.Panel>
                   {' '}
+                  <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+                    <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-yellow-300 ring-8 ring-white dark:bg-yellow-700 dark:ring-gray-900">
+                      <SiLeetcode />
+                    </span>
+                    <h3 className="text-base font-semibold text-gray-900 dark:text-white">
+                      Joined Codeforces
+                    </h3>
+                    <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      January 12th, 2026
+                    </time>
+                    <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
+                      Preparing for internship
+                    </p>
+                  </li>
+                  <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+                    <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
+                      <BsBuilding />
+                    </span>
+                    <h3 className="text-base font-semibold text-gray-900 dark:text-white">
+                      Member
+                    </h3>
+                    <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      August 3rd, 2025
+                    </time>
+                    <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
+                      Core Team Member - Outreach Club @ Film and Media Council
+                    </p>
+                  </li>
+                  <li className="mb-2 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+                    <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
+                      <BsBuilding />
+                    </span>
+                    <h3 className="text-base font-semibold text-gray-900 dark:text-white">
+                      Joined College
+                    </h3>
+                    <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      July 29th, 2024
+                    </time>
+                    <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
+                      Bachelor of Technology from IIT (BHU) Varanasi
+                    </p>
+                  </li>
                   <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
                     <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-purple-200 ring-8 ring-white dark:bg-purple-900 dark:ring-gray-900">
                       <RiDoorClosedLine />
