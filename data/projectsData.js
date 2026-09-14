@@ -10,6 +10,24 @@ const projectsData = [
     tech3: 'OpenAI',
   },
   {
+    title: 'Sentinel',
+    description: `an asynchronous, event-driven Trust & Safety content moderation pipeline combining Computer Vision (CV), LLM-based context reasoning, and a configurable Decision Engine with a real-time Human Moderator Review Dashboard.`,
+    href: '',
+    github: 'https://github.com/Enky-yy/Sentinel',
+    tech1: 'Computer-vision',
+    tech2: 'LLM',
+    tech3: 'Docker',
+  },
+  {
+    title: 'LLM From Scratch',
+    description: `GPT 2 Architectural model with 50M parameters trained on 117M tokens`,
+    href: '',
+    github: 'https://github.com/Enky-yy/llm_from_scratch',
+    tech1: 'PyTorch',
+    tech2: 'LLM',
+    tech3: 'Colab',
+  },
+  {
     title: 'QR-Based File Sharing App',
     description:
       'A Flask-powered file sharing platform with QR transfer, OCR-based search, and secure uploads.',
@@ -82,17 +100,17 @@ const projectsData = [
     tech2: 'Python',
     tech3: 'Numpy',
   },
-  {
-    title: 'CampusNest',
-    description:
-      'A modern student accommodation and campus living discovery platform built with Next.js and Python.',
-    imgSrc: '',
-    href: '',
-    github: 'https://github.com/Enky-yy/CampusNest',
-    tech1: 'Next.js',
-    tech2: 'TypeScript',
-    tech3: 'Python',
-  },
+  // {
+  //   title: 'CampusNest',
+  //   description:
+  //     'A modern student accommodation and campus living discovery platform built with Next.js and Python.',
+  //   imgSrc: '',
+  //   href: '',
+  //   github: 'https://github.com/Enky-yy/CampusNest',
+  //   tech1: 'Next.js',
+  //   tech2: 'TypeScript',
+  //   tech3: 'Python',
+  // },
   // {
   //   title: 'To-Do List',
   //   description: `Clean and simple to-do list application made with Django framework, with features like : easy add tasks, delete and edit tasks, reorder tasks, login and register, mark tasks as completed with Clean UI.`,

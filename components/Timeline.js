@@ -70,9 +70,9 @@ export default function Timeline() {
           <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-red-200 ring-8 ring-white dark:bg-red-900 dark:ring-gray-900">
             <BsBuilding />
           </span>
-          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Secretary (Ex)</h3>
+          <h3 className="text-base font-semibold text-gray-900 dark:text-white">Secretary</h3>
           <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            May 10th, 2026 - Aug 25th, 2026
+            May 10th, 2026
           </time>
           <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
             Secretary - Outreach Club @ Film and Media Council

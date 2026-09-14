@@ -25,16 +25,6 @@ const usesData = [
     href: 'https://gist.github.com/DLevai94/af307fb45d525ffebf38750970f98ed2',
   },
   {
-    title: 'Canva',
-    description: `Sometimes I use Canva to edit some images quickly.`,
-    href: 'https://www.canva.com/',
-  },
-  {
-    title: 'Notion',
-    description: `Permanent docs, organizing my life.`,
-    href: 'https://www.notion.so/',
-  },
-  {
     title: 'PyCharm',
     description: `PyCharm for python development, its plugins and setup are amazing`,
     href: 'https://www.jetbrains.com/pycharm/',
@@ -48,6 +38,16 @@ const usesData = [
     title: 'Opencode',
     description: `Currently using opencode for my AI coding needs.`,
     href: 'https://opencode.com/',
+  },
+  {
+    title: 'Canva',
+    description: `Sometimes I use  to edit some images quickly.`,
+    href: 'https://www.canva.com/',
+  },
+  {
+    title: 'Notion',
+    description: `Permanent docs, organizing my life.`,
+    href: 'https://www.notion.so/',
   },
 ]
 
