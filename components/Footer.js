@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <div className="mb-2 hidden text-sm text-gray-500 dark:text-gray-400 md:flex">
           <div className="mx-1">
-            <Link href="https://harsh-shah.me/" className="link-underline">
+            <Link href="https://harsh-shah.is-a.dev/" className="link-underline">
               Harsh Shah {` © ${year}`}
             </Link>
           </div>

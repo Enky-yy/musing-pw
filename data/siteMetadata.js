@@ -6,8 +6,8 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Harsh',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://harsh-shah.me',
-  siteRepo: 'https://github.com/Enky-yy/blog',
+  siteUrl: 'https://harsh-shah.is-a.dev',
+  siteRepo: 'https://github.com/Enky-yy/',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
@@ -15,7 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/Enky-yy',
   twitter: 'https://twitter.com/HarshShah1510',
   linkedin: 'https://www.linkedin.com/in/harshvardhanshah1510',
-  website: 'https://harsh-shah.me',
+  website: 'https://harsh-shah.is-a.dev',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
