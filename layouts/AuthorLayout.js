@@ -6,7 +6,6 @@ import experienceData from '@/data/experienceData'
 import { RoughNotation } from 'react-rough-notation'
 import { AiOutlineLinkedin, AiOutlineTwitter } from 'react-icons/ai'
 import { AiOutlineGithub } from 'react-icons/ai'
-import { GitHubLogoIcon } from '@radix-ui/react-icons'
 
 export default function AuthorLayout({ children, frontMatter }) {
   const {
@@ -61,8 +60,8 @@ export default function AuthorLayout({ children, frontMatter }) {
               </div> */}
               <div className="mx-auto flex flex-row gap-2">
                 <a
-                  className=" rounded-full border px-8 py-2 text-center text-sm font-light text-blush-body transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                  href="https://github.com/Enky-yy"
+                  className=" rounded-full border px-8 py-2 text-center text-sm font-light text-blush-body transition-colors hover:border-[#24292F] hover:bg-[#24292F] hover:text-white hover:shadow dark:text-white"
+                  href={github}
                   data-screen-name="@Enky-yy"
                   target="_blank"
                   rel="noreferrer noopener"
@@ -71,8 +70,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                   Enky-yy
                 </a>
                 <a
-                  className="rounded-full border px-8 py-2 text-center text-sm font-light text-blush-body transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                  href="https://linkedin.com/in/harshvardhanshah1510"
+                  className="rounded-full border px-8 py-2 text-center text-sm font-light text-blush-body transition-colors hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white hover:shadow dark:text-white"
+                  href={linkedin}
                   data-screen-name="@harshvardhanshah1510"
                   target="_blank"
                   rel="noreferrer noopener"

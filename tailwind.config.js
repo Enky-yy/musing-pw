@@ -60,10 +60,10 @@ module.exports = {
         // Light Theme 1 (approved from pages/light-preview.js) — light mode only.
         // All dark: variants elsewhere stay exactly as-is.
         blush: {
-          page: '#FDF2F7',
-          card: '#FFF7FA',
-          well: '#FDEEF4',
-          border: '#F9D5E3',
+          page: '#FEF7FA',
+          card: '#FFFAFC',
+          well: '#FEF3F8',
+          border: '#FBE6EE',
           ink: '#33202B',
           body: '#4E3A45',
           muted: '#6B5B64',
