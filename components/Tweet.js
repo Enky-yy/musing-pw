@@ -27,7 +27,7 @@ export default function Tweet({
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted')
 
   return (
-    <div className=" my-3 w-full max-w-3xl rounded-md border border-gray-100 bg-white px-4 py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+    <div className=" my-3 w-full max-w-3xl rounded-md border border-blush-border bg-blush-card px-4 py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
       <div className="flex items-center">
         <a className="flex h-12 w-12" href={authorUrl} target="_blank" rel="noopener noreferrer">
           <Image
@@ -47,7 +47,7 @@ export default function Tweet({
           className="author ml-4 flex flex-col !no-underline"
         >
           <span
-            className="flex items-center font-bold leading-5 !text-gray-900 dark:!text-gray-100"
+            className="flex items-center font-bold leading-5 !text-blush-ink dark:!text-gray-100"
             title={author.name}
           >
             {author.name}
@@ -63,7 +63,7 @@ export default function Tweet({
               </svg>
             ) : null}
           </span>
-          <span className="!text-gray-500" title={`@${author.username}`}>
+          <span className="!text-blush-muted" title={`@${author.username}`}>
             @{author.username}
           </span>
         </a>
@@ -76,7 +76,7 @@ export default function Tweet({
           </svg>
         </a>
       </div>
-      <div className="mb-1 mt-4 whitespace-pre-wrap leading-normal  !text-gray-700 dark:!text-gray-200">
+      <div className="mb-1 mt-4 whitespace-pre-wrap leading-normal  !text-blush-body dark:!text-gray-200">
         {formattedText}
       </div>
       {media && media.length ? (
@@ -103,7 +103,7 @@ export default function Tweet({
       ) : null}
       {quoteTweet ? <Tweet {...quoteTweet} /> : null}
       <a
-        className="text-sm !text-gray-500 hover:!underline"
+        className="text-sm !text-blush-muted hover:!underline"
         href={tweetUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -112,9 +112,9 @@ export default function Tweet({
           {format(createdAt, 'h:mm a - MMM d, y')}
         </time>
       </a>
-      <div className="mt-2 flex text-sm !text-gray-700 dark:!text-gray-300">
+      <div className="mt-2 flex text-sm !text-blush-body dark:!text-gray-300">
         <a
-          className="mr-4 flex items-center !text-gray-500 transition hover:!text-blue-600 hover:!underline"
+          className="mr-4 flex items-center !text-blush-muted transition hover:!text-blue-600 hover:!underline"
           href={replyUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -132,7 +132,7 @@ export default function Tweet({
           </span>
         </a>
         <a
-          className="mr-4 flex items-center !text-gray-500 transition hover:!text-green-600 hover:!underline"
+          className="mr-4 flex items-center !text-blush-muted transition hover:!text-green-600 hover:!underline"
           href={retweetUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -150,7 +150,7 @@ export default function Tweet({
           </span>
         </a>
         <a
-          className="flex items-center !text-gray-500 transition hover:!text-red-600 hover:!underline"
+          className="flex items-center !text-blush-muted transition hover:!text-red-600 hover:!underline"
           href={likeUrl}
           target="_blank"
           rel="noopener noreferrer"

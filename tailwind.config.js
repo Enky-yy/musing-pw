@@ -1,6 +1,22 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
+// Canonical brand token scale — single source of truth for the brand color.
+// Values are identical to the legacy primary scale (500: #DE1D8D).
+// All hardcoded #DE1D8D / pink-600 usages must reference `brand-*` utilities,
+// `theme('colors.brand.*')` in CSS, or BRAND_* in JS — zero visual change.
+const brand = {
+  100: '#FDD1D9',
+  200: '#FBA4BC',
+  300: '#F575A5',
+  400: '#EB519B',
+  500: '#DE1D8D',
+  600: '#BE1588',
+  700: '#9F0E7F',
+  800: '#800972',
+  900: '#6A0568',
+}
+
 module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
@@ -37,38 +53,20 @@ module.exports = {
         'gradient-3-end': '#2D00F7',
       },
       colors: {
-        primary: {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#DE1D8D',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
-        },
-        'primary-color': {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#DE1D8D',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
-        },
-        'primary-color-dark': {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#DE1D8D',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
+        brand,
+        primary: brand,
+        'primary-color': brand,
+        'primary-color-dark': brand,
+        // Light Theme 1 (approved from pages/light-preview.js) — light mode only.
+        // All dark: variants elsewhere stay exactly as-is.
+        blush: {
+          page: '#FDF2F7',
+          card: '#FFF7FA',
+          well: '#FDEEF4',
+          border: '#F9D5E3',
+          ink: '#33202B',
+          body: '#4E3A45',
+          muted: '#6B5B64',
         },
         'background-color': '#000',
         green: colors.emerald,
@@ -77,7 +75,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.blush.body'),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
@@ -88,26 +86,26 @@ module.exports = {
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.blush.ink'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.blush.ink'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.900'),
+              color: theme('colors.blush.ink'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.900'),
+              color: theme('colors.blush.ink'),
             },
             pre: {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
               color: theme('colors.green.500'),
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: theme('colors.blush.well'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -121,25 +119,25 @@ module.exports = {
               content: 'none',
             },
             details: {
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: theme('colors.blush.well'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            hr: { borderColor: theme('colors.gray.200') },
+            hr: { borderColor: theme('colors.blush.border') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.gray.500'),
+              color: theme('colors.blush.muted'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.gray.500'),
+              backgroundColor: theme('colors.blush.muted'),
             },
-            strong: { color: theme('colors.gray.600') },
+            strong: { color: theme('colors.blush.body') },
             blockquote: {
-              color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.gray.200'),
+              color: theme('colors.blush.ink'),
+              borderLeftColor: theme('colors.blush.border'),
             },
           },
         },

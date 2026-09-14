@@ -8,9 +8,9 @@ const RecommendCard = ({ title, description, href, tags, showLink = true }) =>
       className="md max-w-[34rem] p-2 md:w-1/2"
       showIcon={false}
     >
-      <div className="h-full overflow-hidden rounded-md border-2 border-solid border-gray-200 hover:border-primary-500 dark:border-gray-800 dark:hover:border-primary-500">
+      <div className="h-full overflow-hidden rounded-md border-2 border-solid border-blush-border hover:border-primary-500 dark:border-gray-800 dark:hover:border-primary-500">
         <div className="p-6">
-          <h4 className="mb-3 text-2xl font-bold leading-8 tracking-tight text-black dark:text-white">
+          <h4 className="mb-3 text-2xl font-bold leading-8 tracking-tight text-blush-ink dark:text-white">
             {title}{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,9 +26,9 @@ const RecommendCard = ({ title, description, href, tags, showLink = true }) =>
               </g>
             </svg>
           </h4>
-          <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+          <p className="prose mb-3 max-w-none text-blush-muted dark:text-gray-400">{description}</p>
           {/* {tags && (
-            <div className="max-w-none text-sm capitalize text-gray-500 dark:text-gray-400">
+            <div className="max-w-none text-sm capitalize text-blush-muted dark:text-gray-400">
               {tags.join(' • ')}
             </div>
           )} */}
@@ -37,16 +37,16 @@ const RecommendCard = ({ title, description, href, tags, showLink = true }) =>
     </CustomLink>
   ) : (
     <div className="md max-w-[34rem] p-4 md:w-1/2">
-      <div className="h-full overflow-hidden rounded-md border-2 border-solid border-gray-200 hover:border-primary-500 dark:border-gray-800 dark:hover:border-primary-500">
+      <div className="h-full overflow-hidden rounded-md border-2 border-solid border-blush-border hover:border-primary-500 dark:border-gray-800 dark:hover:border-primary-500">
         <div className="p-6">
-          <h4 className="mb-3 text-2xl font-bold leading-8 tracking-tight text-black dark:text-white">
+          <h4 className="mb-3 text-2xl font-bold leading-8 tracking-tight text-blush-ink dark:text-white">
             {title}
           </h4>
-          <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">
+          <p className="prose mb-3 max-w-none text-blush-muted dark:text-gray-400">
             (Coming soon) {description}
           </p>
           {/* {tags && (
-            <div className="mt-4 text-xs text-gray-700 dark:text-gray-300">{tags.join(' | ')}</div>
+            <div className="mt-4 text-xs text-blush-body dark:text-gray-300">{tags.join(' | ')}</div>
           )} */}
         </div>
       </div>

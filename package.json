@@ -5,12 +5,12 @@
   "author": {
     "name": "Harsh Shah",
     "email": "shahharsh4653@gmail.com",
-    "url": "https://harsh-shah.me"
+    "url": "https://harsh-shah.is-a.dev"
   },
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "prisma generate && next build && node ./scripts/generate-sitemap",
+    "build": "prisma generate && next build && next-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
@@ -42,6 +42,7 @@
     "motion": "^10.4.0",
     "next": "^12.3.4",
     "next-auth": "^4.24.15",
+    "next-sitemap": "^3.1.55",
     "next-themes": "^0.0.14",
     "nprogress": "^0.2.0",
     "postcss": "^8.4.5",

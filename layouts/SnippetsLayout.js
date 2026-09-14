@@ -19,9 +19,9 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
 
   return (
     <>
-      <div className="mx-auto max-w-6xl divide-y divide-gray-400">
+      <div className="mx-auto max-w-6xl divide-y divide-blush-border">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-blush-ink dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
           <div className="relative max-w-lg">
@@ -30,10 +30,10 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search snippets"
-              className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+              className="block w-full rounded-md border border-blush-border bg-blush-card px-4 py-2 text-blush-ink focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
-              className="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+              className="absolute right-3 top-3 h-5 w-5 text-blush-muted dark:text-gray-300"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
               <Link
                 key={slug}
                 href={`/snippets/${slug}`}
-                className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap border border-gray-200 bg-opacity-50 p-px py-px transition duration-200 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
+                className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap border border-blush-border bg-opacity-50 p-px py-px transition duration-200 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
               >
                 <div className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform bg-primary-500 duration-200 group-hover:scale-x-100" />
                 <div className="absolute bottom-0 left-0 h-full w-0.5 origin-bottom scale-y-0 transform bg-primary-500 duration-200 group-hover:scale-y-100" />
@@ -66,11 +66,11 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                   <article>
                     <div>
                       <h2 className="text-2xl font-bold leading-8 tracking-tight ">
-                        <span className="text-gray-900 transition  duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500">
+                        <span className="text-blush-ink transition  duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500">
                           {title}
                         </span>
                       </h2>
-                      <div className="prose prose-base max-w-none text-gray-500 sm:prose-lg dark:text-gray-400">
+                      <div className="prose prose-base max-w-none text-blush-muted sm:prose-lg dark:text-gray-400">
                         {summary}
                       </div>
 

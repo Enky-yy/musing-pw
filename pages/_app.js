@@ -21,6 +21,9 @@ import { Provider } from '@lyket/react'
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
+// Canonical brand token value — must match theme.colors.brand[500] in tailwind.config.js (#DE1D8D).
+const BRAND_500 = '#DE1D8D'
+
 NProgress.configure({ showSpinner: false })
 
 Router.onRouteChangeStart = () => {
@@ -39,6 +42,7 @@ Router.onRouteChangeError = () => {
 }
 
 const defaultTheme = {
+  // Note: Lyket widget theme (intentionally distinct pinks) — not the site brand token.
   colors: {
     primary: '#71717a',
     secondary: '#ff00c3',
@@ -57,7 +61,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } })
     <SessionProvider session={session}>
       <Provider apiKey={process.env.NEXT_PUBLIC_LYKET_API_KEY} theme={defaultTheme}>
         <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-          <ProgressBar bgcolor="#DE1D8D" />
+          <ProgressBar bgcolor={BRAND_500} />
           <ScrollTop />
           <Head>
             <meta content="width=device-width, initial-scale=1" name="viewport" />

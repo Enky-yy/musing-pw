@@ -10,6 +10,14 @@ export default function CommandPalette({ navigation }) {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [query, setQuery] = useState('')
+  const [index, setIndex] = useState({ posts: [], tags: [] })
+
+  useEffect(() => {
+    fetch('/api/palette')
+      .then((res) => (res.ok ? res.json() : { posts: [], tags: [] }))
+      .then((data) => setIndex({ posts: data.posts || [], tags: data.tags || [] }))
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -28,13 +36,34 @@ export default function CommandPalette({ navigation }) {
 
   const [ThemeSound] = useSound('/static/sounds/open.mp3')
 
+  const q = query.toLowerCase()
+  const allItems = [
+    ...navigation.pages.map((page) => ({ ...page, kind: 'Page' })),
+    ...index.posts.map((post) => ({
+      name: post.title,
+      href: `/blog/${post.slug}`,
+      repo: post.excerpt,
+      kind: 'Post',
+    })),
+    ...index.tags.map((tag) => ({
+      name: tag,
+      href: `/tags/${tag}`,
+      repo: 'Tag',
+      kind: 'Tag',
+    })),
+  ]
   const filterednavigation = query
-    ? navigation.pages.filter((page) => page.name.toLowerCase().includes(query.toLocaleLowerCase()))
-    : navigation.pages
+    ? allItems
+        .filter(
+          (item) =>
+            item.name.toLowerCase().includes(q) || (item.repo || '').toLowerCase().includes(q)
+        )
+        .slice(0, 30)
+    : allItems.slice(0, navigation.pages.length + 10)
   return (
     <>
       <motion.button
-        className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-1 ring-zinc-400 transition-all duration-200 ease-in-out hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
+        className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-blush-well p-1 ring-blush-border transition-all duration-200 ease-in-out hover:bg-blush-well hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
         type="button"
         aria-label="Command palette"
         animate={{
@@ -75,7 +104,7 @@ export default function CommandPalette({ navigation }) {
                 router.push(`${page.href}`)
               }}
               as="div"
-              className="relative mx-auto max-h-[50vh] max-w-xl divide-y divide-gray-300 overflow-hidden overflow-y-scroll rounded-xl bg-zinc-200 shadow-2xl ring-1 ring-black/5 dark:divide-zinc-700 dark:bg-zinc-800"
+              className="relative mx-auto max-h-[50vh] max-w-xl divide-y divide-blush-border overflow-hidden overflow-y-scroll rounded-xl bg-blush-card shadow-2xl ring-1 ring-black/5 dark:divide-zinc-700 dark:bg-zinc-800"
             >
               <div className="flex items-center px-4">
                 <HiSearch className="h-6 w-6" />
@@ -83,7 +112,7 @@ export default function CommandPalette({ navigation }) {
                   onChange={(event) => {
                     setQuery(event.target.value)
                   }}
-                  className="h-12 border-0 bg-transparent  text-sm text-gray-800 placeholder-gray-400 focus:ring-0 dark:text-neutral-400"
+                  className="h-12 border-0 bg-transparent  text-sm text-blush-body placeholder-blush-muted focus:ring-0 dark:text-neutral-400"
                   placeholder="Search..."
                   autoComplete="off"
                 />
@@ -95,14 +124,16 @@ export default function CommandPalette({ navigation }) {
                       {({ active }) => (
                         <div
                           className={`cursor-pointer space-x-1 px-14  py-2  ${
-                            active ? 'bg-zinc-300 dark:bg-zinc-600' : 'bg-zinc-200 dark:bg-zinc-800'
+                            active
+                              ? 'bg-blush-well dark:bg-zinc-600'
+                              : 'bg-blush-card dark:bg-zinc-800'
                           }`}
                         >
                           <span
                             className={`font-medium  ${
                               active
-                                ? 'text-neutral-900 dark:text-neutral-200'
-                                : 'text-neutral-900 dark:text-neutral-200'
+                                ? 'text-blush-ink dark:text-neutral-200'
+                                : 'text-blush-ink dark:text-neutral-200'
                             }`}
                           >
                             {page.name}
@@ -110,8 +141,8 @@ export default function CommandPalette({ navigation }) {
                           <span
                             className={`  ${
                               active
-                                ? 'text-neutral-700 dark:text-neutral-600'
-                                : 'text-neutral-500 dark:text-neutral-800'
+                                ? 'text-blush-muted dark:text-neutral-600'
+                                : 'text-blush-muted dark:text-neutral-800'
                             }`}
                           >
                             {page.repo}
@@ -123,7 +154,7 @@ export default function CommandPalette({ navigation }) {
                 </Combobox.Options>
               )}
               {query && filterednavigation.length === 0 && (
-                <p className="px-12 py-4 text-sm text-gray-500 ">no results found</p>
+                <p className="px-12 py-4 text-sm text-blush-muted ">no results found</p>
               )}
             </Combobox>
           </Transition.Child>

@@ -116,4 +116,4 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more details.
 
 ---
 
-**Crafted with ❤️ by [Harsh Shah](https://harsh-shah.me)**
+**Crafted with ❤️ by [Harsh Shah](https://harsh-shah.is-a.dev)**

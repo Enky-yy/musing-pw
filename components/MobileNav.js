@@ -29,7 +29,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="text-gray-900 dark:text-gray-100"
+          className="text-blush-ink dark:text-gray-100"
         >
           <path
             fillRule="evenodd"
@@ -39,7 +39,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
+        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-blush-well opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
           navShow ? 'pointer-events-auto translate-x-0' : 'pointer-events-none translate-x-full'
         }`}
       >
@@ -54,7 +54,7 @@ const MobileNav = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="text-gray-900 dark:text-gray-100"
+              className="text-blush-ink dark:text-gray-100"
             >
               <path
                 fillRule="evenodd"
@@ -69,7 +69,7 @@ const MobileNav = () => {
             <div key={link.title} className="px-12 py-4">
               <Link
                 href={link.href}
-                className="border-b border-gray-400 pb-1 text-2xl font-semibold tracking-widest text-gray-700 hover:text-black dark:border-gray-300 dark:text-gray-300 dark:hover:text-white"
+                className="border-b border-blush-border pb-1 text-2xl font-semibold tracking-widest text-blush-body hover:text-blush-ink dark:border-gray-300 dark:text-gray-300 dark:hover:text-white"
                 onClick={onToggleNav}
               >
                 {link.title}

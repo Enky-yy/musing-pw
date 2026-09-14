@@ -137,7 +137,7 @@ export default function Now(currentlyReading) {
       <div>
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
-          <div className=" mb-6 mt-4 text-xs text-neutral-700 dark:text-neutral-400">
+          <div className=" mb-6 mt-4 text-xs text-blush-body dark:text-neutral-400">
             This page was automatically updated @{' '}
             {mounted ? `${date}-${month}-${year} ${hour}:${minute}:${second}` : ''}
           </div>
@@ -145,7 +145,7 @@ export default function Now(currentlyReading) {
         {/* Misc */}
         <div>
           <div className="flex justify-between gap-5">
-            <div className="mb-10 mt-2 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mb-10 mt-2 w-1/2 rounded-md border border-blush-border p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Location:</span> <span>Varanasi, India</span>
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
@@ -163,7 +163,7 @@ export default function Now(currentlyReading) {
               </span>
             </div>
 
-            <div className="mb-10 mt-2 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mb-10 mt-2 w-1/2 rounded-md border border-blush-border p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Reading:</span>{' '}
               {currentlyReadingData[0] ? (
                 <a
@@ -184,7 +184,7 @@ export default function Now(currentlyReading) {
           </div>
 
           <div className="-my-6 flex justify-between gap-5">
-            <div className="mb-10 mt-2 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mb-10 mt-2 w-1/2 rounded-md border border-blush-border p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Date:</span>{' '}
               <span>{TodayDate.format('DD/MM/YYYY')}</span>
               <br />
@@ -195,7 +195,7 @@ export default function Now(currentlyReading) {
               </span>
             </div>
 
-            <div className="mb-10 mt-2 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mb-10 mt-2 w-1/2 rounded-md border border-blush-border p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Listening:</span>{' '}
               <span>
                 {data?.songUrl ? (
@@ -216,7 +216,7 @@ export default function Now(currentlyReading) {
             </div>
           </div>
         </div>
-        <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
+        <div className="justify-center text-center text-2xl font-medium text-blush-border dark:text-gray-600">
           &#126;&#126;&#126;
         </div>
         {/* Work */}
@@ -257,7 +257,7 @@ export default function Now(currentlyReading) {
             .
           </p>
         </div>
-        <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
+        <div className="justify-center text-center text-2xl font-medium text-blush-border dark:text-gray-600">
           &#126;&#126;&#126;
         </div>
 

@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         description="Privacy Policy for my website"
       />
       <div className="mx-auto max-w-3xl overflow-hidden">
-        <div className="prose pt-7 text-gray-600 dark:text-gray-300">
+        <div className="prose pt-7 text-blush-muted dark:text-gray-300">
           <h1 className="dark:text-gray-300">Privacy Policy</h1>
           <p>Last updated: July 11, 2022</p>
           <p>
@@ -104,11 +104,11 @@ export default function PrivacyPolicy() {
                 <strong className="dark:text-gray-100">Website</strong> refers to Blog, accessible
                 from{' '}
                 <a
-                  href="https://harsh-shah.me"
+                  href="https://harsh-shah.is-a.dev"
                   rel="external nofollow noopener noreferrer"
                   target="_blank"
                 >
-                  https://harsh-shah.me
+                  https://harsh-shah.is-a.dev
                 </a>
               </p>
             </li>

@@ -24,11 +24,11 @@ function GuestbookEntry({ entry, user }) {
 
   return (
     <div className="">
-      <div className="my-4 w-full rounded-md border border-gray-100 bg-gray-100 px-4 py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
-        <div className="mb-2 text-neutral-900 dark:text-neutral-300">{entry.body}</div>
-        <div className="line-clamp-1 text-gray-600 text-opacity-80 dark:text-white">
+      <div className="my-4 w-full rounded-md border border-blush-border bg-blush-well px-4 py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+        <div className="mb-2 text-blush-ink dark:text-neutral-300">{entry.body}</div>
+        <div className="line-clamp-1 text-blush-muted text-opacity-80 dark:text-white">
           <div className="mb-2 flex ">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-blush-muted">
               {entry.created_by} • {format(new Date(entry.updated_at), "d MMM yyyy 'at' h:mm bb")}
             </p>
           </div>
@@ -94,9 +94,9 @@ export default function Guestbook({ fallbackData }) {
 
   return (
     <>
-      <div className="my-2 w-full rounded-md border border-gray-200 bg-white px-6 py-2 shadow-xl shadow-gray-400 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
+      <div className="my-2 w-full rounded-md border border-blush-border bg-blush-card px-6 py-2 shadow-xl shadow-gray-400 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
         <div className="grid items-center justify-center">
-          <h5 className="mt-2 text-lg font-normal text-gray-900 dark:text-gray-100 md:text-lg">
+          <h5 className="mt-2 text-lg font-normal text-blush-ink dark:text-gray-100 md:text-lg">
             Sign the Guestbook
           </h5>
         </div>
@@ -104,7 +104,7 @@ export default function Guestbook({ fallbackData }) {
           <div className="flex flex-row">
             <a
               href="/api/auth/signin/github"
-              className="mx-2 my-4 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
+              className="mx-2 my-4 flex h-20 w-1/2 items-center justify-center rounded bg-blush-well font-light text-blush-ink ring-blush-border transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
               onClick={(e) => {
                 e.preventDefault()
                 signIn('github')
@@ -124,7 +124,7 @@ export default function Guestbook({ fallbackData }) {
             </a>
             <a
               href="/api/auth/signin/google"
-              className="mx-2 my-4 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
+              className="mx-2 my-4 flex h-20 w-1/2 items-center justify-center rounded bg-blush-well font-light text-blush-ink ring-blush-border transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
               onClick={(e) => {
                 e.preventDefault()
                 signIn('google')
@@ -156,11 +156,11 @@ export default function Guestbook({ fallbackData }) {
                 placeholder="Your message..."
                 required
                 rows={3}
-                className="w-full rounded-md border border-gray-300 text-sm shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:focus:border-gray-700 dark:focus:ring-neutral-600"
+                className="w-full rounded-md border border-blush-border text-sm shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:focus:border-gray-700 dark:focus:ring-neutral-600"
                 maxLength={500}
               />
               <button
-                className="grid w-full place-items-center rounded bg-neutral-100 px-3 py-1 font-medium ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
+                className="grid w-full place-items-center rounded bg-blush-well px-3 py-1 font-medium ring-blush-border transition-all hover:ring-2 dark:bg-gray-600"
                 type="submit"
               >
                 {form.state === 'loading' ? <LoadingSpinner /> : 'Sign'}
@@ -173,7 +173,7 @@ export default function Guestbook({ fallbackData }) {
         ) : form.state === 'success' ? (
           <SuccessMessage>{form.message}</SuccessMessage>
         ) : (
-          <p className="text-xs text-gray-800 dark:text-gray-500"></p>
+          <p className="text-xs text-blush-body dark:text-gray-500"></p>
         )}
       </div>
       <div className="w-full">

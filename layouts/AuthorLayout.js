@@ -28,7 +28,7 @@ export default function AuthorLayout({ children, frontMatter }) {
       <PageSEO title={`About - ${name}`} description={`A little trivia me`} />
       <div className="">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5 md:pl-16">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-blush-ink dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
         </div>
@@ -44,12 +44,12 @@ export default function AuthorLayout({ children, frontMatter }) {
               blurDataURL="/static/images/SVG-placeholder.png"
             />
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
-            <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
-            <div className="text-gray-500 dark:text-gray-400">{company}</div>
+            <div className="text-blush-muted dark:text-gray-400">{occupation}</div>
+            <div className="text-blush-muted dark:text-gray-400">{company}</div>
             <div className="mx-auto flex flex-col justify-center gap-1 pt-3 text-center  ">
               {/* <div className="mx-auto mb-3 ">
                 <a
-                  className=" mb-1 rounded-full border px-8 py-2   text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
+                  className=" mb-1 rounded-full border px-8 py-2   text-center text-sm font-light text-blush-body transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
                   href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Harsh"
                   data-screen-name="@harshshah1510"
                   target="_blank"
@@ -61,7 +61,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               </div> */}
               <div className="mx-auto flex flex-row gap-2">
                 <a
-                  className=" rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
+                  className=" rounded-full border px-8 py-2 text-center text-sm font-light text-blush-body transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
                   href="https://github.com/Enky-yy"
                   data-screen-name="@Enky-yy"
                   target="_blank"
@@ -71,7 +71,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                   Enky-yy
                 </a>
                 <a
-                  className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
+                  className="rounded-full border px-8 py-2 text-center text-sm font-light text-blush-body transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
                   href="https://linkedin.com/in/harshvardhanshah1510"
                   data-screen-name="@harshvardhanshah1510"
                   target="_blank"
@@ -138,7 +138,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 strokeWidth="3"
                 show={true}
               >
-                <span className="text-black dark:text-white">
+                <span className="text-blush-ink dark:text-white">
                   Natural Language Processing and Machine Learning.{' '}
                 </span>
               </RoughNotation>
@@ -312,7 +312,7 @@ export default function AuthorLayout({ children, frontMatter }) {
         </div>
         <div className="mt-10 md:pl-16">
           <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-            {/* <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            {/* <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-blush-ink dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Experience
             </h1> */}
           </div>

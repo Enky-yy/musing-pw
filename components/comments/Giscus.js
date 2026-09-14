@@ -62,7 +62,7 @@ const Giscus = () => {
   }, [LoadComments])
 
   return (
-    <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300">
+    <div className="pb-6 pt-6 text-center text-blush-body dark:text-gray-300">
       {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
       <div className="giscus" id={COMMENTS_ID} />
     </div>

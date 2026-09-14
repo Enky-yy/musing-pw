@@ -1,4 +1,6 @@
+import fs from 'fs'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import generateRss from '@/lib/generate-rss'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
@@ -12,6 +14,12 @@ export async function getStaticProps() {
     currentPage: 1,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
   }
+
+  // rss — this page builds on every run (even with zero posts), so the main
+  // feed regenerates every build with the canonical siteMetadata.siteUrl.
+  // (pages/blog/[...slug].js rewrites the identical bytes when posts exist.)
+  const rss = generateRss(posts)
+  fs.writeFileSync('./public/feed.xml', rss)
 
   return { props: { initialDisplayPosts, posts, pagination } }
 }

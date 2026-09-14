@@ -19,11 +19,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article>
         <div className="mx-auto max-w-3xl">
           <header>
-            <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
+            <div className="space-y-1 border-b border-blush-border pb-10 text-center dark:border-gray-700">
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-base font-medium leading-6 text-blush-muted dark:text-gray-400">
                     <time dateTime={date}>
                       <BsCalendarDate className="-mt-1 mr-1 inline h-4 w-4" /> {formatDate(date)}
                     </time>
@@ -46,10 +46,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </div>
           </header>
           <div
-            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0"
+            className="divide-y divide-blush-border pb-8 dark:divide-gray-700 xl:divide-y-0"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="divide-y divide-blush-border dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">{children}</div>
             </div>
             <Comments frontMatter={frontMatter} />

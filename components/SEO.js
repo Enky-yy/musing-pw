@@ -2,6 +2,13 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import siteMetadata from '@/data/siteMetadata'
 
+// Dynamic OG image fallback — used when no static socialBanner is configured.
+const ogFallbackUrl = (title) =>
+  `${siteMetadata.siteUrl}/api/og?title=${encodeURIComponent(title || siteMetadata.title)}`
+
+const staticBannerUrl = () =>
+  siteMetadata.socialBanner ? siteMetadata.siteUrl + siteMetadata.socialBanner : null
+
 const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl }) => {
   const router = useRouter()
   return (
@@ -33,8 +40,8 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, canonicalUrl 
 }
 
 export const PageSEO = ({ title, description }) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  const ogImageUrl = staticBannerUrl() || ogFallbackUrl(title)
+  const twImageUrl = staticBannerUrl() || ogFallbackUrl(title)
   return (
     <CommonSEO
       title={title}
@@ -47,8 +54,8 @@ export const PageSEO = ({ title, description }) => {
 }
 
 export const TagSEO = ({ title, description }) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  const ogImageUrl = staticBannerUrl() || ogFallbackUrl(title)
+  const twImageUrl = staticBannerUrl() || ogFallbackUrl(title)
   const router = useRouter()
   return (
     <>
@@ -86,7 +93,7 @@ export const BlogSEO = ({
   const modifiedAt = new Date(lastmod || date).toISOString()
   let imagesArr =
     images.length === 0
-      ? [siteMetadata.socialBanner]
+      ? [staticBannerUrl() || ogFallbackUrl(title)]
       : typeof images === 'string'
       ? [images]
       : images

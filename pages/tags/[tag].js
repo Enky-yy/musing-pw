@@ -29,13 +29,11 @@ export async function getStaticProps({ params }) {
     (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(params.tag)
   )
 
-  // rss
-  if (filteredPosts.length > 0) {
-    const rss = generateRss(filteredPosts, `tags/${params.tag}/feed.xml`)
-    const rssPath = path.join(root, 'public', 'tags', params.tag)
-    fs.mkdirSync(rssPath, { recursive: true })
-    fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
-  }
+  // rss — always regenerate for this tag (generateRss is zero-post safe)
+  const rss = generateRss(filteredPosts, `tags/${params.tag}/feed.xml`)
+  const rssPath = path.join(root, 'public', 'tags', params.tag)
+  fs.mkdirSync(rssPath, { recursive: true })
+  fs.writeFileSync(path.join(rssPath, 'feed.xml'), rss)
 
   return { props: { posts: filteredPosts, tag: params.tag } }
 }
